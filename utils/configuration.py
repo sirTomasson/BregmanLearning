@@ -50,6 +50,7 @@ class Conf:
         self.batch_size = 128
         self.lr = 0.1
         self.sparse_init = 1.0
+        self.batch_size = 1000
         
         # ----------------------------------------
         # set all kwargs

@@ -14,16 +14,16 @@ def get_data_set(conf):
     
     if conf.data_set == "MNIST":
         train, test = get_mnist(conf)
-        test_batch_size = 1000
+        test_batch_size = conf.batch_size
     elif conf.data_set == "Fashion-MNIST":
         train, test = get_fashion_mnist(conf)
-        test_batch_size = 1000
+        test_batch_size = conf.batch_size
     elif conf.data_set == "CIFAR10":
         train, test = get_cifar10(conf)
-        test_batch_size = 100
+        test_batch_size = conf.batch_size
     elif conf.data_set == "Encoder-MNIST":
         train, test = get_encoder_mnist(conf)
-        test_batch_size = 1000
+        test_batch_size = conf.batch_size
         pin_memory = True
     else:
         raise ValueError("Dataset:" + conf.data_set + " not defined")
