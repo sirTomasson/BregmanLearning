@@ -327,7 +327,7 @@ def get_optimizer(args, model):
         )
 
     elif args.optimizer == "adam":
-        if not args.train_weights_at_the_same_time:
+        if args.train_weights_at_the_same_time:
             optimizer = torch.optim.Adam(
                 filter(lambda p: p.requires_grad, model.parameters()), lr=args.lr, weight_decay=args.weight_decay
             )

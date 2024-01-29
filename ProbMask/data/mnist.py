@@ -55,7 +55,7 @@ class FashionMNIST:
                 train=True,
                 download=True,
                 transform=transforms.Compose(
-                    [transforms.ToTensor(), transforms.Normalize((0.1307,), (0.3081,))]
+                    [transforms.ToTensor()]
                 ),
             ),
             batch_size=args.batch_size,
@@ -67,7 +67,7 @@ class FashionMNIST:
                 data_root,
                 train=False,
                 transform=transforms.Compose(
-                    [transforms.ToTensor(), transforms.Normalize((0.1307,), (0.3081,))]
+                    [transforms.ToTensor()]
                 ),
             ),
             batch_size=args.batch_size,

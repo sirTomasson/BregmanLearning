@@ -271,7 +271,7 @@ def parse_arguments():
 
     parser.add_argument(
         "--train_weights_at_the_same_time",
-        default=True,
+        default=False,
         action="store_true",
         help="Whether train_weights at the same time",
     )
@@ -285,7 +285,7 @@ def parse_arguments():
 
     parser.add_argument(
         "--finetune",
-        default=True,
+        default=False,
         action="store_true",
         help="Whether finetune",
     )

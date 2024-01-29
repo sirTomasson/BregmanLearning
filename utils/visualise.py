@@ -12,6 +12,8 @@ def visualize_layer_weights(layer):
 
     layer_weights_np = np.abs(layer_weights_np)
     height, width = layer_weights_np.shape
+    
+    layer_weights_np[layer_weights_np.where(layer_weights_zero == 0)] = 1
     plt.figure(figsize=(width * 20 / 100, height * 20 / 100))
     # Plotting the weights
     plt.imshow(layer_weights_np, cmap='gray', interpolation='nearest')
